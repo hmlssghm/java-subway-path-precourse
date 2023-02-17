@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class StationRepository {
+
+    private static final String DOES_NOT_HAVE_A_SUCH_STATION_ERROR = "해당하는 역이 존재하지 않습니다.";
     private static final List<Station> stations = new ArrayList<>();
 
     public static List<Station> stations() {
@@ -22,5 +24,12 @@ public class StationRepository {
 
     public static void deleteAll() {
         stations.clear();
+    }
+
+    public static Station findStation(String name) {
+        return stations.stream()
+                .filter(station->station.getName().equals(name))
+                .findFirst()
+                .orElseThrow(()->new IllegalArgumentException(DOES_NOT_HAVE_A_SUCH_STATION_ERROR));
     }
 }
