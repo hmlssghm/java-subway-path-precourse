@@ -10,13 +10,13 @@ public class EdgeRepository {
     }
 
     static {
-        addEdge(new Edge("gyodae", "namteo", 3, 2));
-        addEdge(new Edge("gyodae", "gangnam", 2, 3));
-        addEdge(new Edge("namteo", "yangjae", 6, 5));
-        addEdge(new Edge("gangnam", "yangjae", 2, 8));
-        addEdge(new Edge("yangjae", "maebong", 1, 1));
-        addEdge(new Edge("gangnam", "yeoksam", 2, 3));
-        addEdge(new Edge("yangjae", "yangsoup", 10, 3));
+        addEdge(new Edge("교대역", "남부터미널역", 3, 2));
+        addEdge(new Edge("교대역", "강남역", 2, 3));
+        addEdge(new Edge("남부터미널역", "양재역", 6, 5));
+        addEdge(new Edge("강남역", "양재역", 2, 8));
+        addEdge(new Edge("양재역", "매봉역", 1, 1));
+        addEdge(new Edge("강남역", "역삼역", 2, 3));
+        addEdge(new Edge("양재역", "양재시민의숲역", 10, 3));
     }
 
     public static void addEdge(Edge edge) {
