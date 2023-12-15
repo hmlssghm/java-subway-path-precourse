@@ -1,5 +1,10 @@
 package subway.view;
 
+import subway.controller.GetTotalDistanceAndTime;
+import subway.domain.Line;
+
+import java.util.List;
+
 public class OutputView {
     public void mainScreen(Boolean firstFlag) {
         if (firstFlag){
@@ -18,7 +23,14 @@ public class OutputView {
 
 
 
-    public void showResult() {
-
+    public void showResult(List<String> path) {
+        GetTotalDistanceAndTime getTotalDistanceAndTime = new GetTotalDistanceAndTime();
+        System.out.println("[INFO] ---");
+        System.out.println("[INFO] 총 거리: " + getTotalDistanceAndTime.getTotalDistance(path) + "km");
+        System.out.println("[INFO] 총 소요 시간: " + getTotalDistanceAndTime.getTotalTime(path) + "분");
+        System.out.println("[INFO] ---");
+        path.forEach(p ->{
+            System.out.println("[INFO] " + p);
+        });
     }
 }

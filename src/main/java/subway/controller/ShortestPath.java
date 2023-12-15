@@ -45,7 +45,7 @@ public class ShortestPath {
         return graph;
     }
 
-    public void findPath(String vertex1, String vertex2, String answer) {
+    public List<String> findPath(String vertex1, String vertex2, String answer) {
         WeightedMultigraph<String, DefaultWeightedEdge> graph = null;
         if (answer.equals("1")){
             graph = mapByDistance();
@@ -56,6 +56,6 @@ public class ShortestPath {
 
         DijkstraShortestPath dijkstraShortestPath = new DijkstraShortestPath(graph);
         List<String> shortestPath = dijkstraShortestPath.getPath(vertex1, vertex2).getVertexList();
-        System.out.println(shortestPath);
+        return shortestPath;
     }
 }

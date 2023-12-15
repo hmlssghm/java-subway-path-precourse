@@ -3,6 +3,7 @@ package subway.controller;
 import subway.view.InputView;
 import subway.view.OutputView;
 
+import java.util.List;
 import java.util.Objects;
 
 public class FunctionOperation {
@@ -27,8 +28,9 @@ public class FunctionOperation {
             String vertex1 = inputView.selectVertex(1);
             String vertex2 = inputView.selectVertex(2);
 
-            shortestPath.findPath(vertex1, vertex2, gotCriteria);
+            List<String> path = shortestPath.findPath(vertex1, vertex2, gotCriteria);
 
+            outputView.showResult(path);
         }
     }
 
