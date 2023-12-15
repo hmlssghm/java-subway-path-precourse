@@ -13,13 +13,13 @@ public class StationRepository {
     }
 
     static {
-        stations.add(new Station("gyodae"));
-        stations.add(new Station("namteo"));
-        stations.add(new Station("gangnam"));
-        stations.add(new Station("yangjae"));
-        stations.add(new Station("maebong"));
-        stations.add(new Station("yeoksam"));
-        stations.add(new Station("yangsoup"));
+        stations.add(new Station("교대역"));
+        stations.add(new Station("남부터미널역"));
+        stations.add(new Station("강남역"));
+        stations.add(new Station("양재역"));
+        stations.add(new Station("매봉역"));
+        stations.add(new Station("역삼역"));
+        stations.add(new Station("양재시민의숲역"));
     }
 
     public static void addStation(Station station) {
